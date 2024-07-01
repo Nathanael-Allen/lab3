@@ -1,12 +1,13 @@
-def validInput(usrInput):
-    try:
-        input(usrInput)
-        print('working')
-    except(TypeError, ValueError):
-        print('Not a valid input...')
+import valid
+from valid import *
 
 def main():
-    validInput('Enter your name: ')
+    on = True
+    while on:
+        validFloatInput('Item price: ')
+        if(not validYN('More items? y/n: ')):
+            on = False   
+    
 
 if __name__ == '__main__':
     main()
