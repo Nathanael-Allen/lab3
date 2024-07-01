@@ -5,7 +5,7 @@ def validFloatInput(question) -> float:
             raise ValueError
         if(float(usrInput) < 0):
             raise ValueError
-        return usrInput
+        return float(usrInput)
     except(Exception):
         print('Not a valid input...')
         
