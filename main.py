@@ -13,13 +13,17 @@ def main():
             'item': validString('Input item name: '),
             'cost': validFloatInput('Input item cost: ')
         }
+        total += newItem['cost']
         items.append(newItem)
 
         if(validYN('More items? y/n: ') == False):
-            printReceipt(total, 0, items)
-            # print(items[0]['item'])
+            tipPercentage = validFloatInput('What percentage would you like to tip? use whole numbers e.g. 15, 20, 25: ')
+            tip = calculateTip(total, tipPercentage)
+            finalTotal = total + tip
+            printReceipt(finalTotal, tip, items)
             running = False
-            
-
+    if(validYN('Run again? y/n: ')):
+        main()
+        
 if __name__ == '__main__':
     main()
