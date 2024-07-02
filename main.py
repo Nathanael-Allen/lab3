@@ -1,3 +1,13 @@
+# Author: Nathanael Allen
+# Assignment: Lab 3
+# Date: 07/01/24
+# Description: This program asks users for a list of items and there costs, 
+# then a tip percent and calculates the total with tip and prints a receipt.
+
+# Input: items -> string, item cost -> float, tip -> float
+# Outputs: a list of items with costs and total
+
+
 from valid import *
 from calc import *
 from receipt import *
