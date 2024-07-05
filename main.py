@@ -7,7 +7,6 @@
 # Input: items -> string, item cost -> float, tip -> float
 # Outputs: a list of items with costs and total
 
-
 from valid import *
 from calc import *
 from receipt import *
