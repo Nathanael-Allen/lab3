@@ -12,13 +12,14 @@ def validFloatInput(question) -> float:
 
 
 def validString(question) -> str:
-    try:
-        usrInput = input(question).strip()
-        if(not usrInput):
-            raise ValueError
-        return usrInput
-    except(Exception):
-        print('ERROR: Invalid input')
+    while True:    
+        try:
+            usrInput = input(question).strip()
+            if(not usrInput):
+                raise ValueError
+            return usrInput
+        except(Exception):
+            print('ERROR: Invalid input')
 
 
 def validYN(question) -> bool:
