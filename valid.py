@@ -1,14 +1,16 @@
 def validFloatInput(question) -> float:
     while True:
-        try:
-            usrInput = input(question).strip()
-            if(not usrInput):
-                raise ValueError
-            if(float(usrInput) < 0):
-                raise ValueError
-            return float(usrInput)
-        except(Exception):
-            print('ERROR: Invalid input')
+        while True:
+            try:
+                usrInput = input(question).strip()
+                if(not usrInput):
+                    raise ValueError
+                if(float(usrInput) < 0):
+                    raise ValueError
+                else:
+                    return float(usrInput)
+            except(Exception):
+                print('ERROR: Invalid input')
 
 
 def validString(question) -> str:
@@ -17,7 +19,8 @@ def validString(question) -> str:
             usrInput = input(question).strip()
             if(not usrInput):
                 raise ValueError
-            return usrInput
+            else:
+                return usrInput
         except(Exception):
             print('ERROR: Invalid input')
 

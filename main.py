@@ -11,6 +11,7 @@ from valid import *
 from calc import *
 from receipt import *
 
+
 def main():
     running = True
     items = []
@@ -25,14 +26,15 @@ def main():
         total += newItem['cost']
         items.append(newItem)
 
-        if(validYN('More items? y/n: ') == False):
+        if validYN('More items? y/n: ') == False:
             tipPercentage = validFloatInput('What percentage would you like to tip? use whole numbers e.g. 15, 20, 25: ')
             tip = calculateTip(total, tipPercentage)
             finalTotal = total + tip
             printReceipt(finalTotal, tip, items)
             running = False
-    if(validYN('Run again? y/n: ')):
+    if validYN('Run again? y/n: '):
         main()
-        
+
+
 if __name__ == '__main__':
     main()
