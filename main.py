@@ -17,7 +17,7 @@ def main():
     items = []
     total = 0
 
-    print(f'{(20 * '*')}\n   TIP CALCULATOR\n{(20 * '*')}')
+    print(f'{(20 * "*")}\n   TIP CALCULATOR\n{(20 * "*")}')
     while running:
         newItem = {
             'item': validString('Input item name: '),
